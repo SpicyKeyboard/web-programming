@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Russel Street Medical</title>
+        <meta charset="utf-8">
+        <meta name="author" content="S3942349">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("a").on('click', function(scroll) {
+                    if (this.hash !== "") {
+                        scroll.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 350, function(){
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });
+        </script>
+        <noscript>This web browser does not support Javascript</noscript>
+    </head>
+    <body>
+        <div class="grid-container">
+            <header>
+                <img src="rsm_logo.png" alt="Russel Street Medical Logo">
+                <h1>Russel Street Medical</h1>
+            </header>
+            <nav>
+                    <li><a href="bookings.html">Bookings</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#who">Who we are</a></li>
+                    <li><a href="#service">Service Area</a></li>
+            </nav>
+            <main>
+                <span>
+                    <h3 id="about">About Us: </h3>
+                    Russel Street Medical opened in 2020 and is located in Melbourne's CBD at 340 Russel Street<br>
+                    Melbourne, just opposite The Old Melbourne Jail and within walking distance of Melbourne  Central<br>
+                    Train Station.<br>
+                    We strive to help all  of our patients with a focus on preventative health care, a view to managing<br>
+                    chronic health conditions with a holistic approach, and with access to a wide range of specialist care<br>
+                    providers when needed.<br>
+                    Under partnerships, we are able to offer RMIT students & staff discounted rates.<br><br>
+                    <table style="width:50%">
+                        <tr>
+                            <th>Consultation</th>
+                            <th>Normal Fee</th>
+                            <th>RMIT Member Free</th>
+                            <th>Medicare Rebate</th>
+                        </tr>
+                        <tr>
+                            <td>Standard</td>
+                            <td>$85.00</td>
+                            <td>$60.50</td>
+                            <td>$39.75</td>
+                        </tr>
+                        <tr>
+                            <td>Long or Complex</td>
+                            <td>$130.00</td>
+                            <td>$91.00</td>
+                            <td>$76.95</td>
+                        </tr>
+                    </table>
+                    <br><br>
+                </span>
+                    <h3 id="who">Who we are:</h3>
+                        <h2>Dr. Abigale Laurentis</h2>
+                        <img src="https://images.pexels.com/photos/9062164/pexels-photo-9062164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Dr. Abigale Laurentis "> 
+                        Abigale Laurentis completed her medical degree at the University of Queensland in 2013,  where she 
+                        also obtained a Bachelor of Science in Biomedicine.  <br>
+                        Over her training and practice, Abigale has worked in a variety of clinical  settings including 
+                        specialities at Latrobe Health. 
+                    <br> <br>
+                        <h2>Dr. Stephen  Hill</h2>
+                        <img src="https://images.pexels.com/photos/6234600/pexels-photo-6234600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Dr. Stephen  Hill"> 
+                        Stephen Hill graduated from Auckland University in New Zealand in 2014,  and obtained his 
+                        Fellowship from the Royal Australian College of General Practitioners in 2017.  <br>
+                        Over his training and practice, Stephen worked in internal medicine at the Royal Children's Hospital 
+                        Melbourne before transitioning to General Practice. 
+                    <br> <br>
+                        <h2>Ms Kiyoko  Tsu</h2>
+                        <img src="https://images.pexels.com/photos/8442283/pexels-photo-8442283.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Ms Kiyoko  Tsu"> 
+                        Kiyoko Tsu completed her Bachelor of Nursing at the Yong Loo Lin School of Medicine in Singapor e in 
+                        2019. <br>
+                        She is an accredited Nurse Immuniser and has worked in various hospitals within metropolitan 
+                        Melbourne. 
+                    <br><br>
+                    <span>
+                        <h3 id="service">Service Area: </h3>
+                        If you are new to Russel Street Medical, you can come into our office at 340 Russel Street to sign up. <br>
+                        If you are an existing member of Russel Street Medical it is possible for you to make bookings both in person or online to <br>
+                        book a vaccination or blood test using the bookings page found in the navigation bar at the top of the screen. <br><br>
+                    </span>
+            </main>
+            <footer>
+                Comments Area: <br>
+                Image 1: <a href="https://www.pexels.com/photo/a-woman-in-white-long-sleeve-shirt-holding-a-red-stethoscope-9062164/">https://www.pexels.com/photo/a-woman-in-white-long-sleeve-shirt-holding-a-red-stethoscope-9062164/</a><br>
+                Image 2: <a href="https://www.pexels.com/photo/a-man-wearing-a-stethoscope-on -his-neck-6234600/">https://www.pexels.com/photo/a-man-wearing-a-stethoscope-on -his-neck-6234600/</a> <br>
+                Image 3: <a href="https://www.pexels.com/photo/female -medical-practitioner-wearing-laboratory-coat-8442283/">https://www.pexels.com/photo/female -medical-practitioner-wearing-laboratory-coat-8442283/</a>  <br>
+            </footer>
+    </body>
+</html>
