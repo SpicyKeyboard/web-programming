@@ -1,0 +1,23 @@
+<head>
+        <title>Russel Street Medical</title>
+        <meta charset="utf-8">
+        <meta name="author" content="S3942349">
+        <link rel="stylesheet" type="text/css" href="indexstyle.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("a").on('click', function(scroll) {
+                    if (this.hash !== "") {
+                        scroll.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 350, function(){
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+            });
+        </script>
+        <noscript>This web browser does not support Javascript</noscript>
+    </head>

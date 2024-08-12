@@ -1,0 +1,77 @@
+<body>
+        <div class="grid-container">
+            <header>
+                <img src="rsm_logo.png" alt="Russel Street Medical Logo">
+                <h1>Russel Street Medical</h1>
+            </header>
+            <nav>
+                    <li><a href="index.php">Home</a></li>
+            </nav>
+        <main>
+            <script>
+                function dropCheck() {
+                        dropbox = document.getElementById("drop").value;
+                        document.getElementById("dropContent").innerHTML= dropbox;
+                }
+                document.getElementById("id").value = idScriptCheck;
+                if (idScriptCheck.includes("script")) {
+                    document.getElementById("id").value = "ID is incorrect."
+                }
+            </script>
+            <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                <p>
+                    Your patient ID: <input id="id" name="id" type="text" pattern = "[a-zA-Z]{2}[0-9]+[a-zA-Z]" style="text-transform:uppercase" placeholder = "Enter your ID" required>
+                </p>
+                <p>
+                    The date: <input id="date" name="date" type="date" required>
+                </p>
+                <div>
+                    Available Times: <br>
+                    <label class="checkleft">
+                        <input type="checkbox" id="check1" name="option[]" class="checkleft" value = "9am - 12pm">
+                        <label for="check1">9am - 12pm</label>
+                    </label>
+                    <label class="checkmid">
+                        <input type="checkbox" id="check2" name="option[]" class="checkmid" value = "12pm - 3pm">
+                        <label for="check2">12pm - 3pm</label>
+                    </label>
+                    <label class="checkright">
+                        <input type="checkbox" id="check3" name="option[]" class="checkright" value = "3pm - 6pm">
+                        <label for="check3">3pm - 6pm</label>
+                    </label>
+                </div>
+                <br>
+                <div>
+                    Appointment Reason: 
+                    <select onchange="dropCheck()" id="drop" name="drop" required>
+                    <option label="Please Select"></option>
+                    <option label="Childhood Vaccination Shots">
+                        Childhood vaccines: A disclaimer that multiple vaccines are normally <br>
+                        administered in combination and may cause the child to be sluggish <br>
+                        or feverous for 24 - 48 hours afterwards. <br>
+                    </option>
+                    <option label="Influenza Shot">
+                        Influenza: The best time to get vaccinated is in April and May each <br>
+                        year for optimal protection over the winter months.  <br>
+                    </option>
+                    <option label="Covid Booster Shot">
+                        Covid Booster Shot: Advice that everyone should arrange to have <br>
+                        their third shot as soon as possible and adults over the age of 30 <br>
+                        should have their fourth shot to protect against new variant strains. <br>
+                    </option>
+                    <option label="Blood Test">
+                        Blood test: That some tests require some fasting ahead of time and <br>
+                        that a staff member will advise them on this prior to the <br>
+                        appointment. <br>
+                    </option>
+                    </select>
+                </div>
+                <p>
+                    <span id="dropContent"></span>
+                </p>
+                <p>
+                    <button formnovalidate type="submit" name="submit">Submit</button>
+                </p>
+            </form>
+        </main>
+    </body>
